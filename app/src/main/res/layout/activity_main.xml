@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="au.edu.swin.conversion.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a number:"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/convertNum"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="8dp"/>
+
+    <EditText
+        android:id="@+id/convertNum"
+        android:layout_width="374dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteY="41dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FROM"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="102dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO"
+        android:layout_marginLeft="178dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_above="@+id/inch"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="63dp" />
+
+    <CheckBox
+        android:id="@+id/met"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="metres"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="169dp"
+        android:layout_below="@+id/cm"
+        android:layout_alignStart="@+id/cm" />
+
+    <CheckBox
+        android:id="@+id/cm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="centimetres"
+        android:checked="true"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="127dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <CheckBox
+        android:id="@+id/inch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inches"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="127dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/foot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="feet"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="169dp"
+        android:layout_below="@+id/inch"
+        android:layout_alignStart="@+id/inch" />
+
+    <CheckBox
+        android:id="@+id/mile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="miles"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="210dp"
+        android:layout_below="@+id/foot"
+        android:layout_alignStart="@+id/foot" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="325dp"
+        android:layout_height="53dp"
+        android:text="Convert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.552"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/mile"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="24sp"/>
+
+</RelativeLayout>
